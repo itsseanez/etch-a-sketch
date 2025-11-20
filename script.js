@@ -12,9 +12,12 @@ let createGrid = (size) => {
             let column = document.createElement("div");
             column.classList.add("column");
             row.appendChild(column);
+            column.addEventListener("mouseover", () => {
+                column.style.backgroundColor = "purple";
+            });
             grid[i][j] = column;
         }
     }
     return grid;
 };
-console.log(createGrid(6))
+console.log(createGrid(16))
