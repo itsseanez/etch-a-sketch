@@ -9,19 +9,21 @@ body {
 #container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 5px;
+    width: 500px;
+    aspect-ratio: 1/1;
 }
 
 .column {
     flex: 1;
     border: 1px solid black;
-    height: 2vh;
     aspect-ratio: 1/1;
 }
 
 .row {
     display: flex;
     gap: 5px;
+    flex: 1;
 }
