@@ -1,4 +1,13 @@
 const container = document.querySelector('#container');
+
+function randomRGB() {
+    const r = Math.floor(Math.random() * 256);  
+    const g = Math.floor(Math.random() * 256);  
+    const b = Math.floor(Math.random() * 256);  
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
 let createGrid = (size) => {
     let grid = [];
 
@@ -13,7 +22,7 @@ let createGrid = (size) => {
             column.classList.add("column");
             row.appendChild(column);
             column.addEventListener("mouseover", () => {
-                column.style.backgroundColor = "purple";
+                column.style.backgroundColor = randomRGB();
             });
             grid[i][j] = column;
         }
