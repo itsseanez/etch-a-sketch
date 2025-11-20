@@ -1,5 +1,12 @@
 const container = document.querySelector('#container');
 
+const button = document.querySelector('button');
+button.addEventListener('click', () => {
+    let size = prompt('What size grid?');
+    container.innerHTML = '';
+    createGrid(size);
+});
+
 function randomRGB() {
     const r = Math.floor(Math.random() * 256);  
     const g = Math.floor(Math.random() * 256);  
@@ -29,4 +36,5 @@ let createGrid = (size) => {
     }
     return grid;
 };
-console.log(createGrid(16))
+
+createGrid(16)
