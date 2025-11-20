@@ -2,15 +2,18 @@ const container = document.querySelector('#container');
 
 const button = document.querySelector('button');
 button.addEventListener('click', () => {
-    let size = prompt('What size grid?');
+    let size = prompt('What size grid?(0-100)');
+    while (size < 0 || size > 100) {
+        size = prompt('What size grid?(0-100)');
+    }
     container.innerHTML = '';
     createGrid(size);
 });
 
 function randomRGB() {
-    const r = Math.floor(Math.random() * 256);  
-    const g = Math.floor(Math.random() * 256);  
-    const b = Math.floor(Math.random() * 256);  
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
     return `rgb(${r}, ${g}, ${b})`;
 }
 
